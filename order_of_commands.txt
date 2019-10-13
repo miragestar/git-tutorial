@@ -1,0 +1,32 @@
+1.	Create local Repository
+	1.	git init
+		Completely new local repository
+		1.	Create github repository from local repository
+	2.	git clone <url>
+		Download the git repository from the <url>
+2.	Move to relevant branch
+	1.	git checkout -b <new branch>
+		Create new branch and switch to it.
+	2.	git checkout <existing branch>
+		Switch to existing branch
+		1.	git pull origin <current branch>
+			Make sure that you're up to date.
+3.	Make changes to the files
+4.	git add <files you want to commit>
+5.	Make a commit
+	1.	For each file you staged using git add, use
+		git diff --cached <file>
+	to see the differences between each file and record each change you made.
+	2.	Make the git commit, using a file in the syntax of
+	commit_file_syntax.txt unless you made a small change
+		git commit -F commit-file
+		git commit -m "Commit Message"
+6.	git push origin <current branch>
+7.	When you're done with a branch, merge your branch into master (make sure to
+	tell everyone else)
+	1.	git checkout master
+	2.	git merge <finished branch>
+	3.	Fix any merge conflicts.
+	4.	git push origin master
+	5.	Tell everyone else to use git fetch
+8.	Repeat steps 2 to 7 until the end of everything.
